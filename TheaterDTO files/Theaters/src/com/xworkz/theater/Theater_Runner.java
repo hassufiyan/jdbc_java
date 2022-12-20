@@ -14,7 +14,7 @@ public class Theater_Runner {
 
 
 
-Theater_Service_impl services=new Theater_Service_impl();
+Theater_Service_impl service=new Theater_Service_impl();
 
 TheaterDto dto=new TheaterDto();
 
@@ -88,21 +88,21 @@ TheaterDto dto12=new TheaterDto("PVR MSR ELements mall ", "Thanisandra", 800, 2,
 TheaterDto dto13 =new TheaterDto("Sandhya Digital 4k", "old madivala", 350, 2, true, 2, 2, false, 3, "49*22 feet");
 TheaterDto dto14 =new TheaterDto("Cauvery", "sankey road", 460, 2, true, 4, 4, false, 4, "58*29 feet");
 	
-services.save(dto);
-services.save(dto1);
-services.save(dto2);
-services.save(dto3);
-services.save(dto4);
-services.save(dto5);	
-services.save(dto6);
-services.save(dto7);
-services.save(dto8);
-services.save(dto9);
-services.save(dto10);
-services.save(dto11);
-services.save(dto12);
-services.save(dto13);
-services.save(dto14);
+service.save(dto);
+service.save(dto1);
+service.save(dto2);
+service.save(dto3);
+service.save(dto4);
+service.save(dto5);	
+service.save(dto6);
+service.save(dto7);
+service.save(dto8);
+service.save(dto9);
+service.save(dto10);
+service.save(dto11);
+service.save(dto12);
+service.save(dto13);
+service.save(dto14);
 
 List<TheaterDto> list=new ArrayList<TheaterDto>();
 list.add(dto);
@@ -122,8 +122,8 @@ list.add(dto13);
 System.out.println(list.add(dto14));
 	
 	
-TheaterDto theatreList=services.read(dto12);
-System.out.println(theatreList);
+System.out.println(service.findByName(dto1));
+
 			
 	}
 	
